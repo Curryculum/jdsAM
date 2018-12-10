@@ -6,12 +6,44 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title %></title>
+    <title>Julia DaSilva assistant maternelle</title>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
-    <%= favicon_tag 'images/favicon.png' %>
+    <%= favicon_tag 'images/baby.ico' %>
   </head>
-  <body>
+  <body class="body">
+    <div class="navbar-wagon">
+      <!-- Right Navigation -->
+      <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+        <a href="/about" class="navbar-wagon-item navbar-wagon-link">Mon profile</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Mes methodes</a>
+        <a href="" class="navbar-wagon-item navbar-wagon-link">Contact</a>
+
+        <!-- Profile picture with dropdown list -->
+        <div class="navbar-wagon-item">
+          <div class="dropdown">
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="#">Qui suis-je?</a></li>
+              <li><a href="#">Mon travail</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dropdown appearing on mobile only -->
+      <div class="navbar-wagon-item hidden-md hidden-lg">
+        <div class="dropdown">
+          <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">Mon profile</a></li>
+            <li><a href="#">Mes methodes</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <%= yield %>
   </body>
 </html>
